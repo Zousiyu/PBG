@@ -71,7 +71,7 @@ if parameters.angle_dist == True:
     
     
 #to export the bed uncomment the next 2 lines: 
-bpy.ops.object.select_all(action = 'TOGGLE')
+#bpy.ops.object.select_all(action = 'TOGGLE')
 print("Exporting the geometry as a STL file...")
 bpy.ops.export_mesh.stl(filepath=parameters.file_path, check_existing=True, axis_forward='Y', axis_up='Z', filter_glob= ".STL", global_scale=1, ascii=False, use_mesh_modifiers=True)
 

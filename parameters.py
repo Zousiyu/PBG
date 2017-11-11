@@ -6,14 +6,14 @@
 #Defining parameters for the simulation 
 
 # defining particle type, valid types: 'sphere', 'cylinder', 'Raschig Ring', 'f_point_star', 'three_holes', 'four_holes', 'tri_lobes', 'quadrilobes', 'four_hole_sphere'
-Particle_type = 'Raschig Ring'
+Particle_type = 'tri_lobes'
 
 ##Tube's dimensions
 # Raduis of the Tube
 cyl_radius = 10.5
 # Length of the Tube
 #Warning! This is not the length of the packing. The packing length depends on number of particles. However, this should be in a safe-side to avoid an overload!
-cyl_depth = 200
+cyl_depth = 300
 
 
 ## Particles Properties
@@ -22,7 +22,7 @@ number_of_particle = 300
 #Particle radius !! in case of Rashig Ring this is outer radius
 particle_radius = 2.25
 #particle innter radius for extruded geometries
-particle_inner_radius = 0.55
+particle_inner_radius = 0.6
 #Particle Length (for cylinders, in case of spheres leave it as default)
 particle_length = 4.5
 
@@ -37,7 +37,7 @@ restitution_factor = 0.88
 #Usinig Coloision Margin: Yes (True), NO (False)
 use_margin = True
 #Colosion margin (lower value = more accuracy, 0 perfect value)
-collision_margin = 0.0
+collision_margin = 0.01
 #linear_deactivation(linear deactivation velocity)
 
 #linear_damping(amount of linear velicity particle is lost over time)
@@ -51,9 +51,9 @@ remove_the_tube = True
 #Do you want to calculate the angle distribution of the particles after the bed is generated?
 angle_dist = True
 #Where do you want to save the angle_dist results?
-file_name ='C:\\Angle_distribu_1200.txt'
+file_name ='Angle_spheres_300_spheres_N4-7.txt'
 
 ## Stl Export properties
-file_path = "spheres_4hole_N=6_1200.stl"
+file_path = "300_spheres_spheres_N=4.7.stl"
 ## Where do you want to save the radial voidage results?
-file_path_2 = "radial_N=6_1200.txt"
+file_path_2 = "radial_300_spheres_N=4.7.txt"

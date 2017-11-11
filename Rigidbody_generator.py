@@ -34,7 +34,7 @@ def part_generation(pellet_key,x_y_range,phi_range,top,vectors):
         x = random.sample(x_y_range, 5)
         y = random.sample(x_y_range, 5)
         numb = 5
-    z = random.sample(range(top,top+6),5) 
+    z = random.sample(range(top, top + 8),5)
     x_r = random.sample(phi_range, 5)
     y_r = random.sample(phi_range, 5)
     z_r = random.sample(phi_range, 5) 
@@ -68,7 +68,7 @@ def part_generation(pellet_key,x_y_range,phi_range,top,vectors):
         elif pellet_key == 4:
             four_hole_generator(vectors, x,y,z,x_r,y_r,z_r,i)
         elif pellet_key == 5:
-            three_holes_generator(vectors, x, y,z,x_r,y_r,z_r,i)
+            three_holes_generator(vectors, x, y,z,x_r,y_r,z_r,i,radi = parameters.particle_radius)
         elif pellet_key == 6:
             tri_lobes_generator(parameters.particle_length, x, y, z, x_r, y_r, z_r,i)
         elif pellet_key == 7:
@@ -119,5 +119,5 @@ def tube_generation(cyl_radius, cyl_depth):
     #activating split impulse
     bpy.context.scene.rigidbody_world.enabled = True
     bpy.context.scene.rigidbody_world.use_split_impulse = True
-    bpy.context.scene.rigidbody_world.steps_per_second = 300
-    bpy.context.scene.rigidbody_world.solver_iterations = 50
+    bpy.context.scene.rigidbody_world.steps_per_second = 500
+    bpy.context.scene.rigidbody_world.solver_iterations = 350
